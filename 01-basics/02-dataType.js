@@ -1,33 +1,32 @@
-    //Primitive Types - Stored directly in the location that the variables is accessed
-    // number => 2 to power 53. Any number in JavaScript is the Number type, including floats and decimals.4
+    //Primitive Types - Stored directly in the location that the variables is accessed.
 
+    // number => Any number in JavaScript is the Number type, including floats and decimals.
     const age = 27.9;
     console.log(age,typeof age)
-    // bigInt => BigInt is a new primitive type and represents integers that are out of the range of the Number type.
 
+    // bigInt => BigInt is a new primitive type and represents integers that are out of the range of the Number type.
     const n = 9007199254740991n;
     console.log(n, typeof n)
-    //string = A string is a "string" of characters wrapped in either single or double quotes. Strings can include any number, letter or symbol.
 
+    //string = A string is a "string" of characters wrapped in either single or double quotes. Strings can include any number, letter or symbol.
     const firstName = "Akhil"
     console.log(firstName, typeof firstName)
-    // boolean => Boolean represents a logical entity and can have only two values: true or false.
 
+    // boolean => Boolean represents a logical entity and can have only two values: true or false.
     const hasKids =  true
 
     // null => null is just a special value which represents “nothing”, “empty” or “value unknown”.
-
     const aptNumber = null;
     console.log(aptNumber, typeof aptNumber)
 
     // undefined => A variable that has not been assigned a value is undefined.
-
     let score;
     console.log(score, typeof score)
     /*
     undefined means a variable has been declared but has not yet been assigned a value. On the other hand, null is an assignment value. It can be assigned to a variable as a representation of no value.
     Also, undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object
     */
+   
     //symbol => A “symbol” represents a unique identifier.
 
 /*********Reference Data Types (Objects) ***********/
