@@ -1,7 +1,6 @@
 //Typically coercion happens when you apply operators to values of different types.
 
-
-//Let's look at our first example
+//Let's look at our first example:
 
 5 + '5'; // 55 (string)
 //So as you can see, if we use the + operator on the number 5 and a string with the character '5', we get a string of 55. Some of you may have expected 10, which is the answer to 5 + 5.
@@ -40,8 +39,9 @@ Number(false); // 0
 
 //Now let's look at the following expression
 
-   5 + undefined; // NaN
+5 + undefined; // NaN
 //So the result is NaN or not a number. We talked a little about this in the last video. The reason is because NaN is the result of a failed number operation. If we run undefined through the Number() method, we also get NaN.
+
 //If we try and add NaN like this, we also get NaN.
 
 5 + NaN; // NaN

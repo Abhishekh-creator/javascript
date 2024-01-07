@@ -1,4 +1,4 @@
-/********** What is variable? *******/
+/********** What is variable? **********/
 // Variables in JavaScript are containers which hold reusable data. In other words, they are units of storage, like some sort of box into which we can put data. Variables are used to store information to be referenced and manipulated in a computer program.
 
 // Here are the following three simple steps to creating a variable:
