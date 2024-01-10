@@ -67,18 +67,82 @@ const length = names.unshift('Dean');
 console.log(length); // 5
 
 // *************array.splice()*************//
-// Now this one is a little more sophisticated, but don't worry we'll walk you through it. The splice method allows you to "splice" values into the array. It's first parameter determines where the new element or elements are placed, the second how many after that point should be deleted before placement and each subsequent condition is merely an element you wish to add. Here's an example.
+// The almighty splice method
+// splice lets you add items to any position. It also lets you remove items from any position. Its syntax looks a bit confusing, but it’s super convenient.
 
-const names = ["Jon", "Bob", "David", "Mark"];
+// Here’s the syntax:
+// const deletedItems = array.splice(index, deleteCount, itemsToAdd)
+// index is the position to start modifying the array.
+// deleteCount is the number of items you want to delete.
+// itemsToAdd is items you want to add, each separated by ,.
+// Adding items with splice
+// You can use splice to add items to the start of an array.
 
-names.splice(2, 0, "Jenny", "Johnny");
+const array = [3, 4, 5]
+array.splice(0, 0, 1, 2)
 
-console.log(names); // ["Jon","Bob", "Jenny", "Johnny", "David","Mark"]
-// It can also return an array of any deleted items, like pop!
+console.log(array) // [1, 2, 3, 4, 5]
 
-const removedValue = names.splice(0,1);
+// Here’s what we did with splice:
+// First argument (0): Start at index 0.
+// Second argument (0): Delete 0 items.
+// Third and fourth argument: Items we want to add.
+// You can use splice to add items to the end of an array. (But it’s easier to use push).
 
-console.log(removedValue); // ["Jon"]
+const array = [3, 4, 5]
+array.splice(array.length, 0, 6, 7)
+
+console.log(array) // [3, 4, 5, 6, 7]
+
+// Here’s what we did:
+// First argument (array.length): Start modifying the array at array.length, which means we start modifying the array AFTER the last item.
+// Second argument (0): Delete 0 items.
+// Third and fourth argument: Items we want to add.
+// You can also use splice to add items to the middle of an array.
+
+const array = [3, 4, 7]
+array.splice(2, 0, 5, 6)
+
+console.log(array) // [3, 4, 5, 6, 7]
+
+// Here’s what we did:
+// First argument (2): Start modifying the array at index 2. This means we start modifying the array between the second and third items.
+// Second argument (0): Delete 0 items.
+// Third and fourth argument: Items we want to add.
+// Removing items with splice
+// You can use splice to remove items from the start of an array.
+
+const array = [3, 4, 5]
+const deleted = array.splice(0, 2)
+
+console.log(deleted) // [3, 4]
+console.log(array) // [5]
+
+// Here’s what we did:
+// First argument (0): Start at index 0.
+// Second argument (2): Delete 2 items.
+// You can use splice to remove items from the end of an array.
+
+const array = [3, 4, 5]
+const deleted = array.splice(array.length - 2, 2)
+
+console.log(array) // [3]
+console.log(deleted) // [4, 5]
+
+// Here’s what we did:
+// First argument (array.length - 2): Modifies the array at index array.length - 2, which is 3 - 2 = 1. So we remove items from second item onwards.
+// Second argument (2): Delete 2 items.
+// You can also use splice to remove items from the middle of an array.
+
+const array = [3, 4, 9, 8, 5]
+const deleted = array.splice(2, 2)
+
+console.log(deleted) // [9, 8]
+console.log(array) // [3, 4, 5]
+Here’s what we did:
+
+First argument (2): Start modifying the array at index 2. This means we start deleting the third item.
+Second argument (2): Delete 2 items.
 
 // *************** array.slice() **************//
 // And finally, the slice function. This handy little piece of code can make a new variable that contains every element from a certain point on in whatever array you feed it!
